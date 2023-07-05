@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies</title>
+    <!-- google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            background-color: #121212;
+        }
+        .namelogo{
+            display: flex;
+        }
+        .navigation{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(141, 140, 140);
+            align-items: center;
+            margin: 0 9em 0 9em;
+            height: 7em;
+            justify-content: space-evenly;
+        }
+        .name{
+            font-size: 35px;
+            font-weight: bold;
+        }
+        .name-part{
+            font-size: 18px;
+            font-weight: bold;
+            transform: rotate(-90deg);
+            background-color: red;
+            color: white;
+            width: 40px;
+            height: 35px;
+        }
+        .search-function{
+            display: flex;
+        }
+        .input-Search{
+            height: 37px;
+            width: 45px;
+            background-color: tomato;
+            margin-left: -15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .end-logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .Moviesflix{
+            background-color: rgb(228, 66, 38);
+            height: 30px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .MoviesVerse{
+            background-color: green;
+            height: 30px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        .subnavigation{
+            background-color: #464848;
+            height: 50px;
+            display: flex;
+            margin: 0 9em 0 9em;
+            display: flex;
+            align-items: center;
+        }
+        .home,.Movies,.Genre,.year,.quality,.webseries,.Hollywood{
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            width: max-content;
+            color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+        .options{
+            display: none;
+        }
+        .Movies:hover .options,.Genre:hover .options,.year:hover .options,.quality:hover .options,.webseries:hover .options{
+            background-color: #464848;
+            display: inline-block;
+        }
+        .tags{
+            display: flex;
+            margin: 1em 9em 0 9em;
+            justify-content: space-between;
+        }    
+        .hindimovies,.punjabi,.p,.p0,.p10,.Net-flix,.hindiseries,.web-series{
+            background-color: #464848;
+            color: rgb(66, 64, 64);
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+        }
+        .telegram{
+            background-color: rgb(12, 100, 242);
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+        }
+        #alert{
+            background-color: green;
+            margin: 1em 9em 0 9em;
+            text-align: center;
+        }
+        .movies1{
+            margin:1em 9em 0 9em;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            height: 200vh;
+            width: 80vw;
+        }
+        img{
+            height: 300px;
+            width: 200px;
+        }
+        .barbie,.Ishqiyapa,.Repeat,.HIT,.Gold,.Nazar-Andaaz,.TheSmurfs,.MoneyHeist,.lionking,.mummy,.tj,.Evil,.hotel{
+            height:450px ;
+            width: 200px;
+            background-color: #464848;
+            color: white;
+            text-align: center;
+        }
+        .page-bar{
+            display: flex;
+            background-color: #464848;
+            color: white;
+            margin: 1em 9em 0 9em;
+            height: 8vh;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .page-bar div{
+            background-color: #464848;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .disclaimer{
+            margin: 1em 9em 0 9em;
+            background-color: rgb(71, 69, 69);
+            color: white;
+            text-align: left;
+            padding: 20px;
+        }
+        .disclaimer li{
+            margin-left:20px ;
+            list-style: square;
+        }
+        .footer{
+            background-color: rgb(45, 44, 44);
+            color: white;
+            height: 10vh;
+            margin-top: 1em;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <div class="namelogo">
+        <div class="name">
+            MOVIES
+        </div>
+        <div class="name-part">
+            Flex
+        </div>
+    </div>
+        <div class="search-function">
+           <div class="input">
+            <textarea id="input" cols="55" rows="2" placeholder="Enter your Text"></textarea>
+           </div>
+           <div class="input-Search">
+            <span class="material-symbols-outlined">
+                search
+            </span>
+           </div>
+        </div>
+        <div class="end-logo">
+           <div class="Moviesflix">Moviesflix</div>
+           <div class="MoviesVerse">Moviesverse</div>
+        </div>
+    </div>
+    <div class="subnavigation">
+        <div class="home"> 
+            <span class="material-symbols-outlined">
+                home
+                </span>
+                Home
+        </div>
+        <div class="Movies">
+            <span class="material-symbols-outlined">
+                movie_edit
+                </span>
+                Movies
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                    </span>
+                    <div class="options">
+                    <div>Lastest Movies</div>
+                    <div>BollyWood</div>
+                    <div>Hindi Movies</div>
+                    <div>South Movies</div>
+                </div>
+        </div>
+        <div class="Genre">
+            <span class="material-symbols-outlined">
+                all_inclusive
+                </span>
+                Genre
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                    </span>
+            <div class="options">
+                <div>Action</div>
+                <div>Action Series</div>
+                <div>Adventure</div>
+                <div>Biography</div>
+            </div>
+        </div>
+        <div class="year">
+            <span class="material-symbols-outlined">
+                calendar_month
+                </span>
+                year
+                <span class="material-symbols-outlined">
+                    arrow_drop_down
+                    </span> 
+            <div class="options">
+            <div>2022</div>
+            <div>2021</div>
+            <div>2020</div>
+            <div>2019</div>
+            </div>
+        </div>
+        <div class="quality">
+            <span class="material-symbols-outlined">
+                skull
+                </span>
+            Quality
+            <span class="material-symbols-outlined">
+                arrow_drop_down
+                </span> 
+            <div class="options">
+                <div>1080p Movies</div>
+                <div>720p Movies</div>
+                <div>480p Movies</div>
+                <div>4K Movies</div>
+            </div>
+        </div>
+        <div class="webseries">
+            <span class="material-symbols-outlined">
+                live_tv
+                </span>
+            WebSeries
+            <span class="material-symbols-outlined">
+                arrow_drop_down
+                </span> 
+        <div class="options">
+            <div>Hindi TV Shows</div>
+            <div>Netflix</div>
+            <div>Amazon Prime Videos</div>
+            <div>Hotstar</div>
+        </div>
+        </div>
+        <div class="Hollywood">
+            <span class="material-symbols-outlined">
+                language
+                </span>
+            Hollywood
+        </div>
+    </div>
+    <div class="tags">
+        <div class="telegram">
+            <span class="material-symbols-outlined">
+                send
+                </span>
+            Join Telegram
+        </div>
+        <div class="hindimovies">
+            Hindi Movies
+        </div>
+        <div class="punjabi">
+            Punjabi Movies
+        </div>
+        <div class="p">
+            480p Movies
+        </div>
+        <div class="p0">
+            720p Movies
+        </div>
+        <div class="p10">
+            1080p Movies
+        </div>
+        <div class="Net-flix">
+            Netflix
+        </div>
+        <div class="hindiseries">
+            Hindi Series
+        </div>
+        <div class="web-series">
+            WebSeries
+        </div>
+    </div>
+    <div id="alert" class="alert alert-warning alert-dismissible fade show" role="alert">
+        Thankyou for Visiting
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="movies1">
+        <div class="barbie">
+            <img src="th.png" alt="image">
+            Download Barbie: Mermaid Power (2022) Dual Audio [Hindi ORG-English] WEB-DL || 720p [650MB] || 480p [300MB] || ESubs
+        </div>
+        <div class="Ishqiyapa">
+            <img src="Ishqiyapa.jpg" alt="image">
+            Download Ishqiyapa Part 2 (2022) Ullu Originals Hindi Hot Web Series 720p WEB-DL || E05 [170MB] || E06 [160MB] || E07 [160MB]
+        </div>
+        <div class="Repeat">
+            <img src="Repeat.jpg" alt="image">
+            Download Repeat (2022) Hindi (HQ Dub) Full Movie WEB-DL || 1080p [2.1GB] || 720p [1.1GB] || 480p [400MB]
+        </div>
+        <div class="HIT">
+            <img src="HIT.jpg" alt="image">
+            Download HIT: The 2nd Case (2022) Dual Audio [Hindi (HQ Dub)-Telugu] HQ DvDScr || 1080p [2.1GB] || 720p [1.1GB] || 480p [400MB] || HC-Subs
+        </div>
+        <div class="Gold">
+            <img src="Gold.jpg" alt="image">
+            Download Gold (2022) Dual Audio [Hindi (HQ Dub)-Malayalam] HQ DvDScr || 1080p [2.7GB] || 720p [1.3GB] || 480p [500MB] || HC-Sub
+        </div>
+        <div class="MoneyHeist">
+            <img src="download-85-1-200x300.jpg" alt="image">
+            Download Money Heist (Season 1 – 5) Part 2 Dual Audio {Hindi-English} WeB-HD 480p [120MB] || 720p [320MB] || 1080p [1.5GB]
+        </div>
+        <div class="Nazar-Andaaz">
+            <img src="Nazar-Andaaz.jpg" alt="image">
+            Download Nazar Andaaz (2022) Hindi ORG Full Movie WEB-DL || 1080p [1.9GB] || 720p [950MB] || 480p [300MB] || ESub
+        </div>
+        <div class="TheSmurfs">
+            <img src="smurf.png" alt="image">
+            Download The Smurfs (2011) Dual Audio {Hindi-English} 480p [300MB] || 720p [800MB]
+        </div>
+        <div class="lionking">
+            <img src="lionking.jpg" alt="image">
+            Download The Lion King 2: Simba’s Pride (1998) Dual Audio {Hindi-English} 480p [300MB] || 720p [700MB]
+        </div>
+        <div class="mummy">
+            <img src="mummy.jpg" alt="image">
+            Download The Mummy (2017) Dual Audio {Hindi-English} 480p [350MB] || 720p [1.1GB] || 1080p [2.6GB]
+        </div>
+        <div class="tj">
+            <img src="tj.jpg" alt="image">
+            Download Tom & Jerry Meet Sherlock Holmes (2010) Dual Audio (Hindi-English) 480p [200MB] || 720p [600MB]
+        </div>
+        <div class="Evil">
+            <img src="evil.jpg" alt="image">
+            Download Resident Evil: Extinction (2007) Dual Audio {Hindi-English} 480p [300MB] || 720p [1.3GB] || 1080p [3.3GB]
+        </div>
+        <div class="hotel">
+            <img src="hotel.jpg" alt="image">
+            Download Hotel Transylvania 2 (2015) Dual Audio {Hindi-English} 480p [400MB] || 720p [990MB]
+        </div>
+    </div>
+    
+    <div class="page-bar">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>Next</div>
+    </div>
+    <div class="disclaimer">
+        <p>Hdmoviesflix, TheMoviesflix, Moviesflix, Moviesflixpro, Moviesverse is an online movie streaming platform that offers Download Hollywood, Web Series, Netflix, Amazon, 300mb Movies, Moviesflix org, Hindi Dubbed Movie 2021, Moviesflix 2021 content that is not released. Themoviesflix has a huge collection of latest movies and films that still not available on the market and YouTube. You can watch and download all contents free of costs, so you have to take some precautions. It is not available in all countries so you can use VPN and choose a location with access to TheMoviesFlix, Moviesflix. Here, we will discuss about the Moviesflix.</p>
+        <p>What is TheMoviesFlix, Moviesflix?<br>
+            Hdmoviesflix, TheMoviesFlix, Moviesflix, Moviesflix Pro, Moviesverse is a platform that provides the latest and unreleased Hollywood and Bollywood movies. Moviesflix helps to Download Hollywood, Web Series, Netflix, Amazon, 300mb Movies, Moviesflixpro, hdmoviesflix, Hindi Dubbed Movie 2022, Moviesflix 2022. You can save your money from going to the theater or buying a CD. It offers HD quality, 720 pixels and 360 pixels videos on the phone and PC screen. You will get all movies and its search option is too advanced to find all movies quickly. It has no specific domains and we will recommend some of them that will exist to watch movies online. It has no specific extension and it was Moviesflix.com and it is suspended now. You can try moviesflix, moviesflixpro, moviesflix.in, movies flix, themoviesflix, moviesflix pro, moviesflixpro.uno Moviesflixpro, the moviesflix,Dual Audio Movies, Hindi Dubbed Series. Download your desired movies and watch it offline for more safety. New movie list that you can watch or download may be included the following:</p><br>
+            <ul>
+                <li>Pushpa The Rise - Part 1</li>
+                <li>Minnal Murali</li>
+                <li>Gangubai Kathiawadi (2022)</li>
+                <li>Valimai (2022)</li>
+                <li>Sooryavanshi 2021</li>
+                <li>ANTIM The Final Truth 2021</li>
+                <li>Satyameva Jayate 2 (2021)</li>
+                <li>Bunty Aur Babli 2 2021</li>
+            </ul><br>
+            <p>What movies leaked by HDMoviesflix?<br>
+                The hdmoviesflix online streaming platform leaked lots of Hollywood, Bollywood films, TV shows and web series. It always leaks the newest movie content on their website. Remember one thing, it’s always illegal to watch movies or download from a piracy website. Some countries have their own law on pirated websites. They arrest or take fine from the viewers of pirated websites. So, it’s better to use VPN while downloading anything from Pirated Websites. By doing this no one can identify you or your location if you are dying to watch the latest movies or wants to download it. Also, they pirated lots of movies and web series, so many users enjoyed them before the official release.</p>
+            <p>Is HDmoviesFlix, TheMoviesFlix & Moviesflix safe and legal?<br>
+                Websites are legal, but if it has no bad or violent content, it is illegal and safe for users. HDMoviesflix and Moviesflix platforms are not selling any user’s data and tracing data from the phone. You can use our TheMoviesFlix website without any issue. So, if you're unable to access our site we recommend to use VPN and disable access from the device setting menu. Be sure while using vpn. Stay safe with a trusted VPN. After all, The streaming & downloading quality of the Moviesflix is excellent even when the connection speed is not particularly high. Furthermore, on smartphones, tablets and computers equipped with Windows 10 it is possible to download the contents offline and watch them in the absence of an active Internet connection. The films that are selected from the best titles offered at international film festivals can be viewed as a real cinema.</p>
+    </div>
+    <div class="footer">
+        HDmoviesFlix | MoviesFlix Pro Copyright © 2022. All right reserved. | vegamovies
+        <span class="material-symbols-outlined">
+            expand_less
+            </span>
+    </div>
+</body>
+</html>
