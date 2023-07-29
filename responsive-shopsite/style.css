@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Kanit:ital,wght@0,600;1,400&family=Lato&family=Poppins:ital@1&family=Ubuntu:ital,wght@0,400;0,700;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background-color: #d4dcff;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 2em;
+    margin: 1em 1em 0px 1.5em;
+    font-size: 1.5em;
+    background-color:#7d83ff ;
+    overflow: hidden;
+}
+.cards{
+    margin: 0 2em 2em 2em;
+    padding: 0 0 1.5em 0;
+    width: 95vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.cards .card{
+    margin: 2em 2em 0 2em;
+}
+.card img{
+    object-fit: cover;
+    height: 300px;
+    width: 18em;
+}
+.button{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+.button button{
+    background-color: rgb(0, 102, 255);
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 8px;
+    border: 1px solid blue;
+}
+.features{
+    margin: 1em 0 0 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#7d83ff ;
+    height: 3em;
+    width: 95%;
+}
+.search-section{
+    margin: 2em 2em 0 2em;
+    width: 95%;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgba(180, 174, 174, 0.811) ;
+}
+.section{
+    width: 60vw;
+}
+.lastsection{
+    display: flex;
+    margin: 2em 2em 0 2em;
+}
+.other2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0em 2em 0 7em;
+}
+.other2 div{
+    margin: 0 0 1em 1em;
+    
+}
+.other2 div img{
+    margin-left: 1em;
+}
+.cardl{
+    margin-top: 2em;
+}
+.cardl img{
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
+}
